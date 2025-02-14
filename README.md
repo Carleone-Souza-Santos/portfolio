@@ -1,13 +1,14 @@
-<!-- verificar
+<h1>Portfólio</h1>
+
+Este é um projeto desenvolvido em React. 
 
 
-const token = import.meta.env.VITE_GITHUB_TOKEN;
+## Tecnologias Utilizadas
 
-const response = await fetch('https://api.github.com/users/Carleone-Souza-Santos/repos', {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+- **React**: Biblioteca JavaScript para construir interfaces de usuário.
+- **React Router**: Para gerenciamento de rotas e navegação.
+- **Tailwind CSS**: Para estilização rápida e responsiva.
+- **Ant-Design**: -Para ícones utilizados nas opções .
 
-const data = await response.json();
-console.log(data); -->
+
+portfolio-carlleons-projects.vercel.app' 
