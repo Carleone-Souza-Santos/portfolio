@@ -9,6 +9,7 @@ Este é um projeto desenvolvido em React.
 - **React Router**: Para gerenciamento de rotas e navegação.
 - **Tailwind CSS**: Para estilização rápida e responsiva.
 - **Ant-Design**: -Para ícones utilizados nas opções .
+- 
+[Veja meu portfólio](https://portfolio-carlleons-projects.vercel.app)
 
 
-<a href="portfolio-carlleons-projects.vercel.app">Click</a>
