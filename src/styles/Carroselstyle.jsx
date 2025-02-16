@@ -23,8 +23,8 @@ export const CarouselWrapper = styled.div`
 `;
 
 export const CarouselContainer = styled.div`
-  width: 40%; /* Menor largura para cada carrossel */
-  max-width: 350px; /* Tamanho máximo reduzido */
+  width: 40%;
+  max-width: 350px;
 
   @media (max-width: 768px) {
     width: 90%;

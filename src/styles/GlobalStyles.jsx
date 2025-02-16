@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: ${(props) => props.theme.typography.fontFamily}
   }
 
   html, body {
@@ -13,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     overflow: hidden;
     font-family: 'Inter', sans-serif;
+    
     color: ${({ theme, isDark }) => (isDark ? '#fff' : theme.colors.text)};
     position: relative;
   }

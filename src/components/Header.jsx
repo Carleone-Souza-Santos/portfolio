@@ -21,7 +21,7 @@ const Header = () => {
     <>
       <GlobalStyles isDark={isDark} />
       <HeaderContainer isDark={isDark}>
-        <Title>🚀 Seja bem-vindo!</Title>
+        <Title style={{ height: 15 }}>🚀 Seja bem-vindo!</Title>
         <ButtonContainer>
           <ToggleButton
             onClick={toggleDarkMode}

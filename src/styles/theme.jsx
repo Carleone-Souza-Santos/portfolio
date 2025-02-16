@@ -1,10 +1,10 @@
 export const theme = {
   colors: {
-    primary: '#5f708ae3',
+    primary: '#647790',
     secondary: '#ffffff',
     text: '#1b222e',
     link: '#171718',
-    accent: '#F59E0B',
+    accent: '#fffefd4b',
     border: '#E5E7EB',
     success: '#10B981',
     error: '#EF4444',
@@ -13,9 +13,7 @@ export const theme = {
     shadow: 'rgba(0, 0, 0, 0.1)',
   },
 
-  images: {
-    logo: '',
-    background: '',
-    profilePic: '',
+  typography: {
+    fontFamily: "'Roboto', sans-serif",
   },
 };

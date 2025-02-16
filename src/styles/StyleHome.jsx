@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Box = styled.div`
   display: flex;
   justify-content: center;
-  padding: 10px;
-  margin: 2px;
+  padding: 2px;
+  margin: 0;
   text-align: center;
-  padding: 50px;
+  padding: 0;
 `;

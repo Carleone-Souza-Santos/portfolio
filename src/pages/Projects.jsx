@@ -1,19 +1,14 @@
 import React from 'react';
 import GitHubProjects from '../service/gitServic';
-import styled from 'styled-components';
+import { Box } from '../styles/StyleHome';
 
 const Projects = () => {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <h1>Javascript</h1>
-      </div>
-      <GitHubProjects />
+      <h1> Projetos</h1>
+      <Box>
+        <GitHubProjects />
+      </Box>
     </>
   );
 };

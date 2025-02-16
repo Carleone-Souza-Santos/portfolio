@@ -3,9 +3,11 @@ import { FooterContainer } from '../styles/FooterStyle';
 
 const Footer = ({ isDark }) => {
   return (
-    <FooterContainer isDark={isDark}>
-      © 2025 - Carleon Todos os direitos reservados
-    </FooterContainer>
+    <>
+      <FooterContainer isDark={isDark}>
+        © 2025 - Carleon Todos os direitos reservados
+      </FooterContainer>
+    </>
   );
 };
 

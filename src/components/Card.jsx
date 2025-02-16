@@ -1,29 +1,58 @@
-import React from 'react';
-import { Card } from 'antd';
+import React, { useState } from 'react';
+import { Card, Button } from 'antd';
+import { DownOutlined, UpOutlined } from '@ant-design/icons';
+import { theme } from '../styles/theme';
 
-const ProjectCard = ({ project }) => {
-  const avatarUrl =
-    project.owner?.avatar_url || 'https://via.placeholder.com/100';
+const ProjectCard = ({ project, width }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const avatarUrl = project.owner?.avatar_url || 'null';
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const cardBackgroundColor = isExpanded
+    ? theme.colors.border
+    : theme.colors.accent;
 
   return (
     <Card
-      title={project.name}
-      bordered={false}
-      style={{ width: 200, margin: '30px' }}
+      style={{
+        width: width || 200,
+        margin: '30px',
+        background: cardBackgroundColor,
+        border: 'none',
+        padding: '20px',
+      }}
       cover={
-        <img
-          alt="Programador Carll"
-          style={{ width: '60px' }}
-          src={avatarUrl}
-        />
+        <img alt="imagem livro" style={{ width: '30px' }} src={avatarUrl} />
       }
     >
       <p>
-        <strong>Linguagem:</strong> {project.language}
+        <strong>Hello!</strong> {project.language}
       </p>
-      <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-        visualize
-      </a>
+
+      <Button
+        onClick={toggleExpand}
+        shape="circle"
+        icon={isExpanded ? <UpOutlined /> : <DownOutlined />}
+        style={{ marginBottom: '10px' }}
+      />
+
+      <div
+        style={{
+          maxHeight: isExpanded ? '1000px' : '0px',
+          overflow: 'hidden',
+          transition: 'max-height 1.2s ease-in-out',
+        }}
+      >
+        <div style={{ padding: isExpanded ? '10px 0' : '0px' }}>
+          <p>{project.description || 'Desenvolvimento...'}</p>
+          <a href={project.html_url} target="_blank" rel="noopener noreferrer">
+            Visualizar Projeto
+          </a>
+        </div>
+      </div>
     </Card>
   );
 };

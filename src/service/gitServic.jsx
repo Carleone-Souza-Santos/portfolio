@@ -18,7 +18,8 @@ const GitHubProjects = () => {
 
         const filteredData = data
           .filter((verific) => verific.language === 'JavaScript')
-          .slice(0, 6);
+          .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+          .slice(0, 5);
 
         setProjects(filteredData);
       } catch (error) {
@@ -35,7 +36,7 @@ const GitHubProjects = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <Row gutter={[16, 16]}>
+    <Row gutter={[14, 14]}>
       {projects.map((project) => (
         <Col xs={24} sm={12} md={8} lg={6} xl={4} key={project.id}>
           <ProjectCard project={project} />
