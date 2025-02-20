@@ -15,7 +15,7 @@ const SmallRoundedIcons = () => {
         IconComponent={<LinkedinOutlined />}
       />
       <IconWrapper
-        link="https://www.instagram.com/seu-perfil-instagram"
+        link="https://www.instagram.com/carleone_fullstack/"
         IconComponent={<InstagramOutlined />}
       />
       <IconWrapper

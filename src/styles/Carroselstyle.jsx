@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const BoxContainerCarrossel = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 70%;
   padding: 10px;
 `;
 
@@ -12,7 +10,7 @@ export const CarouselWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 70%;
+  width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -24,7 +22,7 @@ export const CarouselWrapper = styled.div`
 
 export const CarouselContainer = styled.div`
   width: 40%;
-  max-width: 350px;
+  max-width: 1500px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -32,7 +30,7 @@ export const CarouselContainer = styled.div`
 `;
 
 export const SlideImage = styled.img`
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);

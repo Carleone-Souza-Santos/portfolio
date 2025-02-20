@@ -23,7 +23,7 @@ export const StyledButton = styled.button`
   background: green;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: ${blink} 3s ease-in infinite; /* Animação aplicada */
+  animation: ${blink} 3s ease-in infinite;
 
   &:hover {
     transform: scale(1.1);

@@ -8,6 +8,10 @@ const Buttaplic = ({ isDark }) => {
     color: isDark ? '#FFFFFF' : '#000000',
   };
 
+  const handleClick = () => {
+    window.open('https://www.w3schools.com/js/default.asp', '_blank');
+  };
+
   return (
     <Button
       style={style}
@@ -15,6 +19,7 @@ const Buttaplic = ({ isDark }) => {
       icon={<BookOutlined />}
       size="large"
       title="Clique para aprender"
+      onClick={handleClick}
     />
   );
 };

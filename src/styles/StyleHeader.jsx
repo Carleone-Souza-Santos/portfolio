@@ -11,26 +11,46 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `;
 
 export const Title = styled.h1`
   padding: 20px;
   text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.822);
+
+  @media (max-width: 600px) {
+    padding: 0px;
+    font-size: 15px;
+  }
 `;
 
 export const Nav = styled.nav`
   text-align: end;
   padding: 18px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 600px) {
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: ${({ theme }) => theme.colors.primary};
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+  }
 `;
 
 export const NavLink = styled(Link)`
-  color: ${({ theme, isDark }) => (isDark ? 'white' : theme.colors.link)};
+  color: ${({ theme, isDark, active }) =>
+    active ? theme.colors.secondary : isDark ? 'white' : theme.colors.link};
   margin: 0 25px;
   text-decoration: none;
   font-size: 16px;
-
   position: relative;
   padding-bottom: 2px;
+  transition: color 0.3s ease-in-out;
 
   &::before {
     content: '';
@@ -48,6 +68,12 @@ export const NavLink = styled(Link)`
   &:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  @media (max-width: 600px) {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
   }
 `;
 
@@ -68,5 +94,18 @@ export const ToggleButton = styled.button`
   &:hover {
     background-color: ${({ isDark }) => (isDark ? '#444' : '#ddd')};
     border-radius: 50%;
+  }
+`;
+
+export const MenuButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: ${({ isDark }) => (isDark ? 'white' : 'black')};
+
+  @media (max-width: 600px) {
+    display: block;
   }
 `;

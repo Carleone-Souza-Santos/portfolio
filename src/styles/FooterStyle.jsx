@@ -9,4 +9,8 @@ export const FooterContainer = styled.footer`
   width: 100%;
   bottom: 0;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;

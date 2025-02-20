@@ -17,10 +17,18 @@ export const ImageWrapper = styled.div`
   bottom: 0;
   right: 0;
   padding: 20px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const AstronautImage = styled.img`
   height: 300px;
   width: auto;
   animation: ${gravity} 2s ease-in-out infinite;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;

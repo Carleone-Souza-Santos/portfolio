@@ -49,7 +49,7 @@ const ProjectCard = ({ project, width }) => {
         <div style={{ padding: isExpanded ? '10px 0' : '0px' }}>
           <p>{project.description || 'Desenvolvimento...'}</p>
           <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-            Visualizar Projeto
+            Desenvolvimento Web
           </a>
         </div>
       </div>
