@@ -72,15 +72,15 @@ const skills = [
 ];
 
 const Skills = () => {
-  const [showModal, setShowModal] = useState(false); // Estado para controlar a visibilidade do modal
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowModal(true); // Mostra o modal após 3 segundos
+      setShowModal(true);
     }, 3000);
 
-    return () => clearTimeout(timer); // Limpa o timer caso o componente seja desmontado
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = (path) => {
@@ -109,11 +109,7 @@ const Skills = () => {
         ))}
       </Row>
 
-      {/* Modal que será exibido após 3 segundos */}
-      <Modal show={showModal} close={() => setShowModal(false)}>
-        <h2>Este é o Modal após 3 segundos!</h2>
-        <p>Você pode colocar qualquer conteúdo aqui.</p>
-      </Modal>
+      <Modal show={showModal} close={() => setShowModal(false)}></Modal>
     </Container>
   );
 };

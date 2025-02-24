@@ -29,9 +29,13 @@ export const Nav = styled.nav`
   padding: 18px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
 
   @media (max-width: 600px) {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    flex-direction: column; /* Empilha os itens */
+    align-items: center; /
     position: absolute;
     top: 50px;
     right: 0;
@@ -52,28 +56,11 @@ export const NavLink = styled(Link)`
   padding-bottom: 2px;
   transition: color 0.3s ease-in-out;
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-in-out;
-    background-color: ${({ theme }) => theme.colors.secondary};
-  }
-
-  &:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
   @media (max-width: 600px) {
-    margin: 10px 0;
+    margin: 3px 0;
     font-size: 18px;
     text-align: center;
+    width: 100%;
   }
 `;
 
