@@ -7,7 +7,7 @@ import {
 import { Space } from 'antd';
 import { IconStyle } from '../styles/LinkStyl';
 
-const SmallRoundedIcons = () => {
+const Icons = () => {
   return (
     <Space size="small">
       <IconWrapper
@@ -42,4 +42,4 @@ const IconWrapper = ({ link, IconComponent }) => {
   );
 };
 
-export default SmallRoundedIcons;
+export default Icons;

@@ -4,18 +4,29 @@ export const Container = styled.div`
   text-align: center;
   padding: 5px;
 `;
+
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 800px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 `;
+
 export const Card = styled.div`
   background-color: #2d2d2d;
   padding: 10px;

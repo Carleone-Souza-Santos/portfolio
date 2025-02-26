@@ -1,7 +1,7 @@
 // src/components/Skills.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Row, Card } from '../styles/StyleSkil';
+import { Container, Row, Card } from '../styles/StyleSorftSkil';
 import Modal from '../components/Modal';
 const skills = [
   {
@@ -71,7 +71,7 @@ const skills = [
   },
 ];
 
-const Skills = () => {
+const sorftSkil = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
@@ -114,4 +114,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default sorftSkil;

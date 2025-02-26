@@ -1,7 +1,6 @@
 <h1>Portfólio</h1>
 
-Este é um projeto desenvolvido em React. 
-
+Este é um projeto desenvolvido em React.
 
 ## Tecnologias Utilizadas
 
@@ -12,4 +11,4 @@ Este é um projeto desenvolvido em React.
 
 [Veja meu portfólio](https://portfolio-carlleons-projects.vercel.app)
 
-
+   <!-- src="https://avatars.githubusercontent.com/u/109290792?s=400&u=808f03981b3842b88d1f12709b004f3c331884b4&v=4" -->

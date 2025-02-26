@@ -11,12 +11,12 @@ const Home = () => {
   );
 
   useEffect(() => {
-    const handleResize = () => {
+    const resizeEvent = () => {
       setCardWidth(window.innerWidth < 700 ? '100%' : '800px');
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', resizeEvent);
+    return () => window.removeEventListener('resize', resizeEvent);
   }, []);
 
   const project = {
@@ -34,11 +34,14 @@ const Home = () => {
 
   return (
     <>
+      {/* obs => Text */}
       <h3 style={{ textAlign: 'center', marginBottom: '5px' }}>
         Desenvolvedor
       </h3>
+      {/* obs => Text */}
       <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Front End.</h2>
 
+      {/* obs => box Card */}
       <Box style={{ display: 'flex', justifyContent: 'center' }}>
         <ProjectCard width={cardWidth} project={project} />
       </Box>
@@ -48,8 +51,9 @@ const Home = () => {
       </ImageWrapper>
 
       <Box
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}
       >
+        {/* obs => icons */}
         <SmallRoundedIcons />
       </Box>
     </>

@@ -25,7 +25,7 @@ const Header = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleLinkClick = (link) => {
+  const ClickLink = (link) => {
     setActiveLink(link);
     setIsOpen(false);
   };
@@ -52,26 +52,29 @@ const Header = () => {
       </HeaderContainer>
 
       <Nav isOpen={isOpen}>
+        {/* home */}
         <NavLink
           to="/"
           isDark={isDark}
-          onClick={() => handleLinkClick('/')}
+          onClick={() => ClickLink('/')}
           active={activeLink === '/'}
         >
           Home
         </NavLink>
+        {/* skil */}
         <NavLink
-          to="/skills"
+          to="/sorftskil"
           isDark={isDark}
-          onClick={() => handleLinkClick('/skills')}
-          active={activeLink === '/skills'}
+          onClick={() => ClickLink('/sorftskil')}
+          active={activeLink === '/sorftskil'}
         >
           Habilidades
         </NavLink>
+        {/* project */}
         <NavLink
           to="/projects"
           isDark={isDark}
-          onClick={() => handleLinkClick('/projects')}
+          onClick={() => ClickLink('/projects')}
           active={activeLink === '/projects'}
         >
           Projetos

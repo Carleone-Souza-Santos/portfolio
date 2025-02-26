@@ -5,7 +5,7 @@ const Footer = ({ isDark }) => {
   return (
     <>
       <FooterContainer isDark={isDark}>
-        © 2025 - Carleon Todos os direitos reservados
+        © 2025 - Carleone Todos os direitos reservados
       </FooterContainer>
     </>
   );

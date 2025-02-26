@@ -1,5 +1,5 @@
 import React from 'react';
-import GitHubProjects from '../service/gitServic';
+import GitProjects from '../service/GitHubProjects';
 import { Box } from '../styles/StyleHome';
 
 const Projects = () => {
@@ -7,7 +7,7 @@ const Projects = () => {
     <>
       <h1> Projetos</h1>
       <Box>
-        <GitHubProjects />
+        <GitProjects />
       </Box>
     </>
   );
