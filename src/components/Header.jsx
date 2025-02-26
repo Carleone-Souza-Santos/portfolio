@@ -61,12 +61,12 @@ const Header = () => {
         >
           Home
         </NavLink>
-        {/* skil */}
+        {/* habilidades' */}
         <NavLink
-          to="/sorftskil"
+          to="/hardskills"
           isDark={isDark}
-          onClick={() => ClickLink('/sorftskil')}
-          active={activeLink === '/sorftskil'}
+          onClick={() => ClickLink('/hardskills')}
+          active={activeLink === '/hardskills'}
         >
           Habilidades
         </NavLink>

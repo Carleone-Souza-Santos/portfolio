@@ -78,7 +78,7 @@ const skills = [
   },
 ];
 
-const sorftSkil = () => {
+const hardSkills = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
@@ -121,4 +121,4 @@ const sorftSkil = () => {
   );
 };
 
-export default sorftSkil;
+export default hardSkills;

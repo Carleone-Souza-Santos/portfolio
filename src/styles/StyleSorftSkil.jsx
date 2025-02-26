@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   text-align: center;
-  padding: 5px;
+  padding: 30px;
 `;
 
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-top: 20px;
+  gap: 5px;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
 

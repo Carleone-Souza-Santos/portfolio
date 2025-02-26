@@ -32,7 +32,7 @@ const Modal = ({ show, close, project }) => {
             />
           )}
 
-          <Title>Hello Word</Title>
+          <Title>Olá</Title>
           <Message>
             Clique nos cards para aprender mais sobre cada tecnologia. Explore
             os links e comece sua jornada de aprendizagem. Bons Estudos!
