@@ -51,7 +51,11 @@ const Home = () => {
       </ImageWrapper>
 
       <Box
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '10px',
+        }}
       >
         {/* obs => icons */}
         <SmallRoundedIcons />

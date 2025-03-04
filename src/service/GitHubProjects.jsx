@@ -27,7 +27,7 @@ const GitHubProjects = () => {
   };
   const filterProjects = (projectsData) => {
     return projectsData
-      .filter((project) => project.language === 'JavaScript')
+      .filter((project) => project.language === 'JavaScript' || 'TypeScript')
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       .slice(0, 5);
   };

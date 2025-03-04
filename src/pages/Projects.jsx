@@ -6,6 +6,7 @@ const Projects = () => {
   return (
     <>
       <Box>
+        {/* onde esta localizado proj do github */}
         <GitProjects />
       </Box>
     </>

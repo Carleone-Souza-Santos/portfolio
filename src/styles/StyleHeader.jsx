@@ -26,7 +26,8 @@ export const Title = styled.h1`
 
 export const Nav = styled.nav`
   text-align: end;
-  padding: 18px;
+  padding: 15px;
+  font-weight:600;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -49,7 +50,7 @@ export const Nav = styled.nav`
 export const NavLink = styled(Link)`
   color: ${({ theme, isDark, active }) =>
     active ? theme.colors.secondary : isDark ? 'white' : theme.colors.link};
-  margin: 0 25px;
+  margin: 0 20px;
   text-decoration: none;
   font-size: 16px;
   position: relative;
@@ -66,7 +67,8 @@ export const NavLink = styled(Link)`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 10px;
+  margin-right: 20px;
+  gap: 5px;
   align-items: center;
 `;
 
@@ -75,7 +77,7 @@ export const ToggleButton = styled.button`
   border: none;
   padding: 5px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   color: ${({ isDark }) => (isDark ? 'white' : 'black')};
 
   &:hover {
@@ -87,8 +89,6 @@ export const ToggleButton = styled.button`
 export const MenuButton = styled.button`
   display: none;
   background: none;
-  border: none;
-  font-size: 24px;
   cursor: pointer;
   color: ${({ isDark }) => (isDark ? 'white' : 'black')};
 
