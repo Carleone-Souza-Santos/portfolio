@@ -1,10 +1,10 @@
 // Home
 import React, { useState, useEffect } from 'react';
 import { Box, AstronautImage, ImageWrapper } from './style/StyleHome';
-import Img from '../../assets/Astronaut.png';
 import ProjectCard from '../../components/Card/Card';
 import { IconsLinks } from '../../components/Links/Links';
 import Carousel from '../../components/Carrossel/Carrossel';
+import Img from '/Astronaut.png';
 
 const Home = () => {
   const [cardWidth, setCardWidth] = useState(
