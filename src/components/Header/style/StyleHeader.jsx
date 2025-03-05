@@ -27,7 +27,7 @@ export const Title = styled.h1`
 export const Nav = styled.nav`
   text-align: end;
   padding: 15px;
-  font-weight:600;
+  font-weight: 600;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -35,8 +35,8 @@ export const Nav = styled.nav`
 
   @media (max-width: 600px) {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
-    flex-direction: column; /* Empilha os itens */
-    align-items: center; /
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50px;
     right: 0;
@@ -96,3 +96,4 @@ export const MenuButton = styled.button`
     display: block;
   }
 `;
+z;

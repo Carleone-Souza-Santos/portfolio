@@ -1,9 +1,10 @@
+// Home
 import React, { useState, useEffect } from 'react';
-import { Box } from '../styles/StyleHome';
-import Img from '../assets/Astronaut.png';
-import ProjectCard from '../components/Card';
-import SmallRoundedIcons from '../components/Links';
-import { AstronautImage, ImageWrapper } from '../styles/EfectIArt';
+import { Box, AstronautImage, ImageWrapper } from './style/StyleHome';
+import Img from '../../assets/Astronaut.png';
+import ProjectCard from '../../components/Card/Card';
+import { IconsLinks } from '../../components/Links/Links';
+import Carousel from '../../components/Carrossel/Carrossel';
 
 const Home = () => {
   const [cardWidth, setCardWidth] = useState(
@@ -19,6 +20,7 @@ const Home = () => {
     return () => window.removeEventListener('resize', resizeEvent);
   }, []);
 
+  //description
   const project = {
     name: 'Hello Turma!',
     description:
@@ -29,19 +31,11 @@ const Home = () => {
     owner: {
       avatar_url: Img,
     },
-    html_url: 'https://finofurodeluxo.com.br/',
+    html_url: 'https://github.com/Carleone-Souza-Santos/portfolio',
   };
 
   return (
     <>
-      {/* obs => Text */}
-      <h3 style={{ textAlign: 'center', marginBottom: '5px' }}>
-        Desenvolvedor
-      </h3>
-      {/* obs => Text */}
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Front End.</h2>
-
-      {/* obs => box Card */}
       <Box style={{ display: 'flex', justifyContent: 'center' }}>
         <ProjectCard width={cardWidth} project={project} />
       </Box>
@@ -58,8 +52,9 @@ const Home = () => {
         }}
       >
         {/* obs => icons */}
-        <SmallRoundedIcons />
+        <IconsLinks />
       </Box>
+      <Carousel />
     </>
   );
 };

@@ -5,32 +5,35 @@ import {
   GithubOutlined,
 } from '@ant-design/icons';
 import { Space } from 'antd';
-import { IconStyle } from '../styles/LinkStyl';
+import { IconStyle } from './style/LinkStyl';
 
-const Icons = () => {
+export const IconsLinks = () => {
   return (
     <Space size="small">
       <IconWrapper
         link="https://www.linkedin.com/in/carleone-santos/"
         IconComponent={<LinkedinOutlined />}
+        label="LinkedIn"
       />
       <IconWrapper
         link="https://www.instagram.com/carleone_fullstack/"
         IconComponent={<InstagramOutlined />}
+        label="Instagram"
       />
       <IconWrapper
         link="https://github.com/Carleone-Souza-Santos"
         IconComponent={<GithubOutlined />}
+        label="GitHub"
       />
     </Space>
   );
 };
 
-const IconWrapper = ({ link, IconComponent }) => {
+const IconWrapper = ({ link, IconComponent, label }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
       <IconStyle
         hover={hover}
         onMouseEnter={() => setHover(true)}
@@ -41,5 +44,3 @@ const IconWrapper = ({ link, IconComponent }) => {
     </a>
   );
 };
-
-export default Icons;

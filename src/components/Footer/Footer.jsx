@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterContainer } from '../styles/FooterStyle';
+import { FooterContainer } from './style/FooterStyle';
 
 const Footer = ({ isDark }) => {
   return (

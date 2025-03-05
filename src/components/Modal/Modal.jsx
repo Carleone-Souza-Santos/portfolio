@@ -8,7 +8,7 @@ import {
   Title,
   Message,
   ProjectName,
-} from '../styles/ModalStyle';
+} from './style/ModalStyle';
 
 const Modal = ({ show, close, project }) => {
   if (!show) {

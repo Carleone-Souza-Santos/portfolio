@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
-import { theme } from '../styles/theme';
+import { theme } from '../../styles/theme';
 
 const ProjectCard = ({ project, width }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -25,7 +25,7 @@ const ProjectCard = ({ project, width }) => {
         padding: '20px',
       }}
       cover={
-        <img alt="imagem livro" style={{ width: '30px' }} src={avatarUrl} />
+        <img alt="Dev Carlleon" style={{ width: '30px' }} src={avatarUrl} />
       }
     >
       <p>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project, width }) => {
         <div style={{ padding: isExpanded ? '10px 0' : '0px' }}>
           <p>{project.description || 'Desenvolvimento...'}</p>
           <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-            Desenvolvimento Web
+            Acesso
           </a>
         </div>
       </div>

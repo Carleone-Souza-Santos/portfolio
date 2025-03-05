@@ -1,6 +1,6 @@
 import React from 'react';
 import { WhatsAppOutlined } from '@ant-design/icons';
-import { StyledButton } from '../styles/WhatsStyle';
+import { StyledButton } from './style/WhatsStyle';
 
 const WhatsButton = () => {
   return (

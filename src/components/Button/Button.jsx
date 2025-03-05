@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'antd';
-import { BookOutlined } from '@ant-design/icons';
-import { AlertOutlined } from '@ant-design/icons';
-import { EnvironmentOutlined } from '@ant-design/icons';
-import { RobotOutlined } from '@ant-design/icons';
+import {
+  BookOutlined,
+  AlertOutlined,
+  EnvironmentOutlined,
+  RobotOutlined,
+} from '@ant-design/icons';
 
-// efect button
 const Buttaplic = ({ isDark }) => {
   const style = {
     backgroundColor: isDark ? '#000000' : '#FFFFFF',
     color: isDark ? '#FFFFFF' : '#000000',
   };
+
   // estudos
   const clickEstud = () => {
     window.open('https://www.w3schools.com/js/default.asp', '_blank');
@@ -40,25 +42,23 @@ const Buttaplic = ({ isDark }) => {
         style={style}
         shape="circle"
         icon={<BookOutlined />}
-        size="large"
+        size="small"
         title="Clique para aprender"
         onClick={clickEstud}
-        font-sizer={1}
       />
       <Button
         style={style}
         shape="circle"
         icon={<AlertOutlined />}
-        size="large"
+        size="small"
         title="Buscar Vagas"
         onClick={clickJob}
       />
-
       <Button
         style={style}
         shape="circle"
         icon={<EnvironmentOutlined />}
-        size="large"
+        size="small"
         title="RoadMap"
         onClick={clickRoadMap}
       />
@@ -66,7 +66,7 @@ const Buttaplic = ({ isDark }) => {
         style={style}
         shape="circle"
         icon={<RobotOutlined />}
-        size="large"
+        size="small"
         title="Test"
         onClick={clickTest}
       />

@@ -7,9 +7,10 @@ import {
   ToggleButton,
   ButtonContainer,
   MenuButton,
-} from '../styles/StyleHeader';
-import { GlobalStyles } from '../styles/GlobalStyles';
-import Buttaplic from './Button';
+} from './style/StyleHeader';
+import BellNotification from '../BellNotification/BellNotification';
+import { GlobalStyles } from '../../styles/GlobalStyles';
+import Buttaplic from '../Button/Button';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
@@ -48,6 +49,7 @@ const Header = () => {
           <MenuButton onClick={toggleMenu} isDark={isDark}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </MenuButton>
+          <BellNotification />
         </ButtonContainer>
       </HeaderContainer>
 

@@ -1,7 +1,16 @@
 import React from 'react';
-import Root from './routes/Root';
-import WhatsButton from './components/Whats';
-import Footer from './components/Footer';
+{
+  /* rotas */
+}
+import { Root } from './routes/Root';
+{
+  /* whatssap */
+}
+import WhatsButton from './components/Whats/Whats';
+{
+  /* rodapé */
+}
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

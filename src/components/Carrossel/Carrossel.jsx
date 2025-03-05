@@ -6,9 +6,9 @@ import {
   BoxContainerCarrossel,
   CarouselContainer,
   SlideImage,
-} from '../styles/Carroselstyle';
+} from './style/Carroselstyle';
 
-const images = [
+const logo = [
   'iconhtml.png',
   'iconCss.png',
   'iconBotstrap.png',
@@ -23,18 +23,20 @@ const images = [
 const Carousel = () => {
   const settings = {
     infinite: true,
-    speed: 300,
-    slidesToShow: 3,
+    speed: 400,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
+    vertical: true,
+    arrows: false,
   };
 
   return (
     <BoxContainerCarrossel>
       <CarouselContainer>
         <Slider {...settings}>
-          {images.map((img, index) => (
+          {logo.map((img, index) => (
             <div key={index}>
               <SlideImage src={img} alt={`Slide ${index + 1}`} />
             </div>

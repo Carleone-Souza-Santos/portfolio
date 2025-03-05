@@ -1,14 +1,10 @@
-// src/components/Skills.js
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Container, Row, Card } from '../styles/StyleSorftSkil';
-import Modal from '../components/Modal';
-const skills = [
+// cards hardskill
+export const hardSkills = [
   {
     img: '/iconhtml.png',
     title: 'HTML',
     description: 'Linguagem de marcação para estruturação web.',
-    path: 'https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Structuring_content',
+    path: 'https://web.dev/learn/html',
   },
   {
     img: '/iconCss.png',
@@ -27,6 +23,12 @@ const skills = [
     title: 'Git / GitHub',
     description: 'Controle de versão e hospedagem de código.',
     path: 'https://git-scm.com/book/en/v2',
+  },
+  {
+    img: '/Sass.png',
+    title: 'Sass',
+    description: 'Extensão do CSS que oferece funcionalidades como variáveis.',
+    path: 'https://sass-lang.com/',
   },
   {
     img: '/iconjavascript.png',
@@ -53,6 +55,18 @@ const skills = [
     path: 'https://pt-br.react.dev/',
   },
   {
+    img: '/mongodb.png',
+    title: 'MongoDB',
+    description: 'Banco de dados NoSQL orientado a documentos.',
+    path: 'https://www.mongodb.com/pt-br/docs/',
+  },
+  {
+    img: '/iconSql.png',
+    title: 'SQL',
+    description: 'Linguagem para bancos de dados relacionais.',
+    path: 'https://learn.microsoft.com/pt-br/sql/?view=sql-server-ver16',
+  },
+  {
     img: '/Tailwind.jpg',
     title: 'Tailwind CSS',
     description: 'Framework utilitário para estilização rápida.',
@@ -65,60 +79,16 @@ const skills = [
     path: 'https://v4.mui.com/pt/getting-started/usage/',
   },
   {
-    img: '/mongodb.png',
-    title: 'MongoDB',
-    description: 'Banco de dados NoSQL orientado a documentos.',
-    path: 'https://www.mongodb.com/pt-br/docs/',
+    img: '/antDesign.png',
+    title: 'Ant-Design',
+    description: 'Componentes UI, design moderno e personalizável.',
+    path: 'https://ant.design/',
   },
   {
-    img: '/iconSql.png',
-    title: 'SQL',
-    description: 'Linguagem para bancos de dados relacionais.',
-    path: 'https://learn.microsoft.com/pt-br/sql/?view=sql-server-ver16',
+    img: '/vite.svg',
+    title: 'Vite',
+    description:
+      'Ferramenta de build rápida e eficiente para desenvolvimento web.',
+    path: 'https://vite.dev/',
   },
 ];
-
-const hardSkills = () => {
-  const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleClick = (path) => {
-    if (path) {
-      if (path.startsWith('http')) {
-        window.open(path, '_blank');
-      } else {
-        navigate(path);
-      }
-    }
-  };
-
-  return (
-    <Container>
-      <Row>
-        {skills.map((skill, index) => (
-          <Card
-            key={index}
-            onClick={() => handleClick(skill.path)}
-            style={{ cursor: skill.path ? 'pointer' : 'default' }}
-          >
-            <img src={skill.img} alt={skill.title} />
-            <h3>{skill.title}</h3>
-            <p>{skill.description}</p>
-          </Card>
-        ))}
-      </Row>
-
-      <Modal show={showModal} close={() => setShowModal(false)}></Modal>
-    </Container>
-  );
-};
-
-export default hardSkills;

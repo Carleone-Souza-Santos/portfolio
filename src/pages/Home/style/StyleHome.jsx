@@ -1,5 +1,12 @@
 import styled, { keyframes } from 'styled-components';
 
+export const Box = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
 const gravity = keyframes`
   0% {
     transform: translateY(0);
