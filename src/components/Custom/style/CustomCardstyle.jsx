@@ -19,7 +19,6 @@ export const StyledCard = styled(Card)`
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   }
 
-  // Responsividade
   @media (max-width: 768px) {
     width: 180px;
     height: 200px;

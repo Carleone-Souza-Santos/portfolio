@@ -1,0 +1,22 @@
+<!--  Styled company -->
+<!-- 'react-icons/fa' -->
+
+isDark (boolean): Controle do tema da página. Quando verdadeiro, o tema escuro é ativado.
+isOpen (boolean): Controle da visibilidade do menu responsivo.
+activeLink (string): Controla qual link de navegação está ativo.
+
+FaBars: Exibe o ícone de menu (hamburguer) quando o menu está fechado.
+FaTimes: Exibe o ícone de fechar quando o menu está aberto.
+
+Você pode personalizar a aparência do componente alterando
+os estilos dentro de StyleHeader.js ou criando novas propriedades nos
+componentes Nav, NavLink, Title, entre outros.
+
+Além disso, os ícones de notificação e o botão customizado
+Buttaplic podem ser personalizados conforme sua necessidade.
+
+<!--
+ Componente.
+ <Header />
+ Componente ultilizado no (Root)
+ desenvolvedor => Carleone -->

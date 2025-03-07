@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background: ${({ isDark }) => (isDark ? 'success' : ' primary')};
-  color: ${({ isDark }) => (isDark ? 'info' : 'primary')};
   padding: 10px;
   text-align: center;
   position: absolute;
@@ -14,3 +12,16 @@ export const FooterContainer = styled.footer`
     font-size: 10px;
   }
 `;
+
+//cores do themer
+
+// primary: '#647790',
+// secondary: '#ffffff',
+// text: '#1b222e',
+// link: '#171718',
+// accent: '#fffefd4b',
+// border: '#E5E7EB',
+// success: '#10B981',
+// error: '#EF4444',
+// warning: '#F59E0B',
+// info: '#60A5FA',

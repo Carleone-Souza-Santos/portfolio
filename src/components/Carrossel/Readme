@@ -1,0 +1,33 @@
+<!-- React Slick (react-slick)
+Styled Components
+Slick Carousel  -->
+
+- Lista dos Logos de tecnologia
+
+O array logo contém os nomes dos arquivos de imagem que representam diferentes
+tecnologias, como HTML, CSS, JavaScript e etc.
+Essas imagens são exibidas sequencialmente no carrossel.
+
+- Configuração do Carrossel
+
+O objeto settings contém as configurações do carrossel:
+infinite: true: Permite que o carrossel rode de forma contínua.
+speed: 400: Define a velocidade da transição em milissegundos.
+
+slidesToShow: 1: Exibe um slide por vez.
+slidesToScroll: 1: Move um slide por vez.
+autoplay: true: Ativa a rotação automática das imagens.
+autoplaySpeed: 3000: Define o tempo de exibição de cada slide antes da troca.
+vertical: true: Faz o carrossel deslizar na vertical.
+arrows: false: Remove os botões de navegação.
+
+- Renderização do Carrossel
+
+O carrossel é envolvido pelos componentes BoxContainerCarrossel e CarouselContainer,
+que são estilizados via styled-components.
+O Slider da biblioteca react-slick é utilizado para mapear as imagens do array logo,
+O componente SlideImage é usado para exibir as imagens com o devido estilo.
+
+<!-- ; Componente.
+; <Carousel />
+; desenvolvedor => Carleone -->

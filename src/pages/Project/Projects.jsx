@@ -9,7 +9,7 @@ import { projectsServices } from '../../service/ImgProjects/ImgProjects';
 // componente de card
 import { CustomCard } from '../../components/Custom/CustomCard';
 
-const Projects = () => {
+const Projects = (img) => {
   return (
     <>
       <Box style={{ marginTop: '15px' }}>

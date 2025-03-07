@@ -34,9 +34,8 @@ const Header = () => {
   return (
     <>
       <GlobalStyles isDark={isDark} />
-      <HeaderContainer isDark={isDark}>
+      <HeaderContainer $isDark={isDark}>
         <Title style={{ height: 15 }}>📚 Seja bem-vindo!</Title>
-
         <ButtonContainer>
           <ToggleButton
             onClick={toggleDarkMode}
@@ -44,38 +43,35 @@ const Header = () => {
           >
             {isDark ? '🌙' : '🌞'}
           </ToggleButton>
-          <Buttaplic isDark={isDark} />
-
-          <MenuButton onClick={toggleMenu} isDark={isDark}>
+          <Buttaplic $isDark={isDark} />
+          <MenuButton onClick={toggleMenu} $isDark={isDark}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </MenuButton>
           <BellNotification />
         </ButtonContainer>
       </HeaderContainer>
 
-      <Nav isOpen={isOpen}>
-        {/* home */}
+      <Nav $isOpen={isOpen}>
         <NavLink
           to="/"
-          isDark={isDark}
+          $isDark={isDark}
           onClick={() => ClickLink('/')}
           active={activeLink === '/'}
         >
           Home
         </NavLink>
-        {/* habilidades' */}
+
         <NavLink
           to="/hardskills"
-          isDark={isDark}
+          $isDark={isDark}
           onClick={() => ClickLink('/hardskills')}
           active={activeLink === '/hardskills'}
         >
           Habilidades
         </NavLink>
-        {/* project */}
         <NavLink
           to="/projects"
-          isDark={isDark}
+          $isDark={isDark}
           onClick={() => ClickLink('/projects')}
           active={activeLink === '/projects'}
         >

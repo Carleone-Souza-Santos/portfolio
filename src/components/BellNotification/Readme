@@ -1,0 +1,24 @@
+;  npm install styled-components 
+
+
+* Inicialmente, há 1 notificação.
+
+A cada 4 minutos 240.000 ms, uma nova notificação é adicionada até um limite de 5 notificações.
+Isso é gerenciado pelo useEffect para atualizar automaticamente.
+
+* Exibição de Notificações
+
+Quando o ícone do sino é clicado e houver notificações pendentes, uma notificação do navegador é exibida.
+Se a permissão de notificação já foi concedida, ela é exibida automaticamente.
+Se a permissão ainda não foi concedida ou negada, o usuário será solicitado a autorizar as notificações.
+
+* Controle de Notificações
+
+Quando uma notificação é exibida, o contador diminui.
+Se o contador chegar a zero, o ícone do sino fica desativado com opacidade reduzida.
+O clique no ícone apenas funciona quando há notificações pendentes.
+
+
+;      <BellNotification />
+;           Componente ultilizado no (Header) 
+;                  desenvolvedor => Carleone

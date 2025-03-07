@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
 import {
-  BookOutlined,
-  AlertOutlined,
   EnvironmentOutlined,
   RobotOutlined,
+  Html5Outlined,
+  HourglassOutlined,
 } from '@ant-design/icons';
 
 const Buttaplic = ({ isDark }) => {
@@ -13,19 +13,19 @@ const Buttaplic = ({ isDark }) => {
     color: isDark ? '#FFFFFF' : '#000000',
   };
 
-  // estudos
-  const clickEstud = () => {
-    window.open('https://www.w3schools.com/js/default.asp', '_blank');
+  // Conheça +
+  const clickExp = () => {
+    window.open('https://htmlrev.com/', '_blank');
+  };
+
+  // expiração
+  const clickExpiration = () => {
+    window.open('https://calltoinspiration.com/', '_blank');
   };
 
   // caminhos para desenvolvimento
   const clickRoadMap = () => {
     window.open('https://roadmap.sh/', '_blank');
-  };
-
-  // buscar vagas
-  const clickJob = () => {
-    window.open('https://github.com/frontendbr/vagas/issues', '_blank');
   };
 
   // teste conhecimentos
@@ -41,18 +41,18 @@ const Buttaplic = ({ isDark }) => {
       <Button
         style={style}
         shape="circle"
-        icon={<BookOutlined />}
+        icon={<Html5Outlined />}
         size="small"
-        title="Clique para aprender"
-        onClick={clickEstud}
+        title="Html Exp"
+        onClick={clickExp}
       />
       <Button
         style={style}
         shape="circle"
-        icon={<AlertOutlined />}
+        icon={<HourglassOutlined />}
         size="small"
-        title="Buscar Vagas"
-        onClick={clickJob}
+        title="Expiração"
+        onClick={clickExpiration}
       />
       <Button
         style={style}

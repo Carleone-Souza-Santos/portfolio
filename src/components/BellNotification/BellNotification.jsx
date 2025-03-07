@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { NotificationBadge, NotificationIcon } from './style/BellStyle';
+import {
+  Container,
+  NotificationBadge,
+  NotificationIcon,
+} from './style/BellStyle';
 
 const BellNotification = () => {
-  const [count, setCount] = useState(1);
+  const [notifications, setNotifications] = useState(1);
 
   useEffect(() => {
+    if (notifications >= 5) return;
+
     const interval = setInterval(() => {
-      setCount((prevCount) => (prevCount < 5 ? prevCount + 1 : prevCount));
-    }, 120000);
+      setNotifications((prev) => Math.min(prev + 1, 5));
+    }, 240000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [notifications]);
 
   const handleClick = () => {
-    if (count === 0) return; // ❌
+    if (!('Notification' in window) || notifications === 0) return;
 
     if (Notification.permission === 'granted') {
       new Notification('🔔 Notificação', {
-        body: 'Parabéns vc esta dando os primeiros passos na programação , fico Feliz!',
+        body: 'Você está dando os primeiros passos na programação, fico feliz!',
         icon: '/icone.png',
       });
     } else if (Notification.permission !== 'denied') {
@@ -28,20 +34,21 @@ const BellNotification = () => {
       });
     }
 
-    setCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 0));
+    setNotifications((prev) => Math.max(prev - 1, 0));
   };
 
   return (
-    <div style={{ position: 'relative', display: 'inline-block' }}>
-      {count > 0 && <NotificationBadge count={count} />}
-      <NotificationIcon
-        onClick={handleClick}
-        style={{
-          cursor: count === 0 ? 'not-allowed' : 'pointer',
-          opacity: count === 0 ? 0.5 : 1,
-        }}
-      />
-    </div>
+    <Container>
+      <NotificationBadge count={notifications} offset={[5, 0]}>
+        <NotificationIcon
+          onClick={notifications > 0 ? handleClick : undefined}
+          style={{
+            cursor: notifications === 0 ? 'not-allowed' : 'pointer',
+            opacity: notifications === 0 ? 0.3 : 1,
+          }}
+        />
+      </NotificationBadge>
+    </Container>
   );
 };
 

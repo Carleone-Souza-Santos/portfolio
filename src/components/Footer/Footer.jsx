@@ -1,13 +1,11 @@
 import React from 'react';
 import { FooterContainer } from './style/FooterStyle';
 
-const Footer = ({ isDark }) => {
+const Footer = () => {
   return (
-    <>
-      <FooterContainer isDark={isDark}>
-        © 2025 - Carleone Todos os direitos reservados
-      </FooterContainer>
-    </>
+    <FooterContainer>
+      © 2025 - Carleone S Todos os direitos reservados
+    </FooterContainer>
   );
 };
 

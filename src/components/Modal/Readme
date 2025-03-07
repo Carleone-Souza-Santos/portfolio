@@ -1,0 +1,16 @@
+<!-- npm install styled-components -->
+
+O componente Modal é uma interface modal reutilizável para exibição de conteúdo em destaque, como informações de projetos e interações com o usuário.
+
+O Modal é exibido como um overlay na tela,
+centralizando o conteúdo de forma elegante.
+
+Funcionalidade
+Exibe o Avatar do proprietário do projeto, se disponível, ou um avatar padrão.
+Mostra uma mensagem de boas-vindas e incentivo ao usuário.
+O modal pode ser fechado através do botão X ou se a variável show for definida como false.
+
+<!-- ; Componente.
+; <Modal />
+- Aplicado por (props) => HardSkills.jsx
+; desenvolvedor => Carleone -->

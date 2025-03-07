@@ -1,0 +1,23 @@
+<!--
+Ant Design
+Styled Components
+-->
+
+Imagem do projeto.
+Avatar do usuário.
+Descrição do projeto.
+Botão clicável que abre um link externo.
+Ícone do GitHub para acessar o repositório
+
+Action(path): Abre o link do projeto em uma nova aba.
+Github(link): Abre o repositório no GitHub.
+
+Utiliza StyledCard para estilização personalizada.
+Contém uma imagem do projeto e um botão de clique para abrir um link externo.
+Exibe um avatar e uma descrição dentro do Meta do Card.
+Inclui um ícone do GitHub (GithubOutlined) que, ao ser clicado, redireciona
+para o repositório do projeto.
+
+<!-- ; Componente.
+; <CustomCard />
+; desenvolvedor => Carleone -->

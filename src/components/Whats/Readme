@@ -1,0 +1,19 @@
+<!--
+Styled-components
+Ant Design Icons
+-->
+
+O componente WhatsButton é um botão de ação que permite que os usuários se conectem diretamente ao WhatsApp através de um link.
+
+- O botão exibe o ícone oficial do WhatsApp, utilizado através do Ant Design Icons.
+- O botão inclui a propriedade `aria-label` para melhorar a acessibilidade, fornecendo uma
+  descrição do que o botão faz para leitores de tela.
+
+-Estilos Customizáveis:
+
+- O estilo do botão é personalizável e pode ser modificado facilmente através
+  do componente de estilo
+
+<!-- ; Componente.
+; <WhatsButton />
+; desenvolvedor => Carleone -->
