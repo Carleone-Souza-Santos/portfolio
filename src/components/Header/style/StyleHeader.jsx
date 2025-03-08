@@ -34,7 +34,8 @@ export const Nav = styled.nav`
   gap: 15px;
 
   @media (max-width: 600px) {
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    display: ${({ $isOpen }) =>
+      $isOpen ? 'flex' : 'none'}; /* Alterna entre flex e none */
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -44,6 +45,8 @@ export const Nav = styled.nav`
     width: 100%;
     padding: 20px;
     z-index: 10;
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Faz o menu deslizar para dentro */
   }
 `;
 
