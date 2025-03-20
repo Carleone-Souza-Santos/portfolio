@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Wrapper, Text, Notice, Number } from './styles/VisitStyled';
 
 export const VisitorCounter = () => {
-  const initialCount = 356;
+  const initialCount = 558;
   const [count, setCount] = useState(initialCount);
 
   useEffect(() => {

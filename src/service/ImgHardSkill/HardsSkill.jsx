@@ -1,5 +1,5 @@
 // cards hardskill
-export const hardSkills = [
+export const mySkills = [
   {
     img: '/iconhtml.png',
     title: 'HTML',

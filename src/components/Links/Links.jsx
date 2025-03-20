@@ -1,3 +1,4 @@
+// links (Linkdin. instag ,github)
 import React, { useState } from 'react';
 import {
   LinkedinOutlined,
@@ -30,14 +31,14 @@ export const IconsLinks = () => {
 };
 
 const IconWrapper = ({ link, IconComponent, label }) => {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState(true);
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
       <IconStyle
         hover={hover}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+        onMouseEnter={() => setHover(false)}
+        onMouseLeave={() => setHover(true)}
       >
         {IconComponent}
       </IconStyle>

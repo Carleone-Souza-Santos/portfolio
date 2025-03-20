@@ -3,20 +3,22 @@ import {
   HeaderContainer,
   Title,
   Nav,
-  NavLink,
-  ToggleButton,
   ButtonContainer,
   MenuButton,
+  NavButton,
 } from './style/StyleHeader';
-import BellNotification from '../BellNotification/BellNotification';
+import { BellNotification } from '../BellNotification/BellNotification';
 import { GlobalStyles } from '../../styles/GlobalStyles';
-import Buttaplic from '../Button/Button';
+import { Button } from '@mui/material';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Home, Build, Work, DarkMode, LightMode } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+export const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('/');
+  const navigate = useNavigate();
 
   const toggleDarkMode = () => {
     setIsDark((prev) => !prev);
@@ -26,24 +28,31 @@ const Header = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const ClickLink = (link) => {
+  const handleClick = (link) => {
     setActiveLink(link);
     setIsOpen(false);
+    navigate(link);
   };
 
   return (
     <>
-      <GlobalStyles isDark={isDark} />
+      <GlobalStyles $isDark={isDark} />
       <HeaderContainer $isDark={isDark}>
-        <Title style={{ height: 15 }}>📚 Seja bem-vindo!</Title>
+        <Title>Portfólio</Title>
         <ButtonContainer>
-          <ToggleButton
+          <Button
+            variant="contained"
             onClick={toggleDarkMode}
-            title={isDark ? 'Clique  modo claro' : 'Clique  modo escuro'}
+            title={isDark ? 'Modo escuro' : 'Modo claro'}
+            style={{
+              height: 30,
+              width: 40,
+              backgroundColor: isDark ? '#333' : '#fff',
+              color: isDark ? '#fff' : '#333',
+            }}
           >
-            {isDark ? '🌙' : '🌞'}
-          </ToggleButton>
-          <Buttaplic $isDark={isDark} />
+            {isDark ? <DarkMode /> : <LightMode />}
+          </Button>
           <MenuButton onClick={toggleMenu} $isDark={isDark}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </MenuButton>
@@ -51,35 +60,28 @@ const Header = () => {
         </ButtonContainer>
       </HeaderContainer>
 
-      <Nav $isOpen={isOpen}>
-        <NavLink
-          to="/"
-          $isDark={isDark}
-          onClick={() => ClickLink('/')}
-          active={activeLink === '/'}
+      <Nav $isOpen={isOpen} $isDark={isDark}>
+        <NavButton
+          onClick={() => handleClick('/')}
+          $active={activeLink === '/'}
         >
-          Home
-        </NavLink>
+          <Home />
+        </NavButton>
 
-        <NavLink
-          to="/hardskills"
-          $isDark={isDark}
-          onClick={() => ClickLink('/hardskills')}
-          active={activeLink === '/hardskills'}
+        <NavButton
+          onClick={() => handleClick('/skills')}
+          $active={activeLink === '/skills'}
         >
-          Habilidades
-        </NavLink>
-        <NavLink
-          to="/projects"
-          $isDark={isDark}
-          onClick={() => ClickLink('/projects')}
-          active={activeLink === '/projects'}
+          <Build />
+        </NavButton>
+
+        <NavButton
+          onClick={() => handleClick('/projects')}
+          $active={activeLink === '/projects'}
         >
-          Projetos
-        </NavLink>
+          <Work />
+        </NavButton>
       </Nav>
     </>
   );
 };
-
-export default Header;

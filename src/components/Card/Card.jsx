@@ -3,9 +3,10 @@ import { Card, Button } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { theme } from '../../styles/theme';
 
-const ProjectCard = ({ project, width }) => {
+export const ProjectCard = ({ project, width }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const avatarUrl = project.owner?.avatar_url || 'null';
+
+  const avatarUrl = null;
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -25,7 +26,9 @@ const ProjectCard = ({ project, width }) => {
         padding: '20px',
       }}
       cover={
-        <img alt="Dev Carlleon" style={{ width: '30px' }} src={avatarUrl} />
+        avatarUrl ? (
+          <img alt="Dev" style={{ width: '30px' }} src={avatarUrl} />
+        ) : null
       }
     >
       <p>
@@ -56,5 +59,3 @@ const ProjectCard = ({ project, width }) => {
     </Card>
   );
 };
-
-export default ProjectCard;

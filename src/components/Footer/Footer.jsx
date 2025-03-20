@@ -1,12 +1,10 @@
 import React from 'react';
-import { FooterContainer } from './style/FooterStyle';
+import { FooterContainer } from './Style/FooterStyle';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterContainer>
       © 2025 - Carleone S Todos os direitos reservados
     </FooterContainer>
   );
 };
-
-export default Footer;

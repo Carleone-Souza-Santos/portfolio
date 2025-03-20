@@ -2,7 +2,7 @@ import React from 'react';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { StyledButton } from './style/WhatsStyle';
 
-const WhatsButton = () => {
+export const WhatsButton = () => {
   return (
     <StyledButton
       type="button"
@@ -13,5 +13,3 @@ const WhatsButton = () => {
     </StyledButton>
   );
 };
-
-export default WhatsButton;

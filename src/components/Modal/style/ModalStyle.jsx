@@ -34,7 +34,7 @@ export const CloseButton = styled.button`
   background: transparent;
   border: none;
   font-size: 20px;
-  color: #333;
+  color: #000000;
   cursor: pointer;
 `;
 

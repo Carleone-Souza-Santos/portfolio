@@ -3,38 +3,32 @@ import {
   Container,
   NotificationBadge,
   NotificationIcon,
-} from './style/BellStyle';
+} from './Style/BellStyle';
+import { CardServic } from '../CardNotification/CardServic';
 
-const BellNotification = () => {
+export const BellNotification = () => {
   const [notifications, setNotifications] = useState(1);
+  const [showCard, setShowCard] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
-    if (notifications >= 5) return;
+    if (notifications >= 3) return;
 
     const interval = setInterval(() => {
       setNotifications((prev) => Math.min(prev + 1, 5));
-    }, 240000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, [notifications]);
 
   const handleClick = () => {
-    if (!('Notification' in window) || notifications === 0) return;
-
-    if (Notification.permission === 'granted') {
-      new Notification('🔔 Notificação', {
-        body: 'Você está dando os primeiros passos na programação, fico feliz!',
-        icon: '/icone.png',
-      });
-    } else if (Notification.permission !== 'denied') {
-      Notification.requestPermission().then((permission) => {
-        if (permission === 'granted') {
-          new Notification('🔔 Notificação', { body: 'Parabéns!' });
-        }
-      });
-    }
+    if (notifications === 0) return;
 
     setNotifications((prev) => Math.max(prev - 1, 0));
+    setShowCard(true);
+    setClickCount((prev) => prev + 1);
+
+    setTimeout(() => setShowCard(false), 7000);
   };
 
   return (
@@ -48,8 +42,9 @@ const BellNotification = () => {
           }}
         />
       </NotificationBadge>
+
+      {/* Passa o clickCount para o CardServic */}
+      {showCard && <CardServic clickCount={clickCount} />}
     </Container>
   );
 };
-
-export default BellNotification;

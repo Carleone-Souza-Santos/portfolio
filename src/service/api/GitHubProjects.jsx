@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCard from '../../components/Card/Card';
+import { ProjectCard } from '../../components/Card/Card';
 import { Box } from '../../pages/Home/style/StyleHome';
 import { Row, Col } from 'antd';
 import { ProjectCardWrapper } from './style/GitHub.style';

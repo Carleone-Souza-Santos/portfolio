@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: fixed;
-  bottom: 70px;
-  right: 10px;
-  width: 100px;
+  bottom: 45px;
+  right: 40px;
+  width: 90px;
   padding: 10px;
-  background: linear-gradient(45deg, #2196f3, #9c27b0);
+  background: linear-gradient(45deg, #585d6167, #28568be6);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -27,7 +27,7 @@ export const Text = styled.div`
 `;
 
 export const Notice = styled.div`
-  font-size: 12px;
+  font-size: 10px;
   margin-bottom: 5px;
 
   @media (max-width: 600px) {
@@ -36,10 +36,10 @@ export const Notice = styled.div`
 `;
 
 export const Number = styled.div`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 
   @media (max-width: 600px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;

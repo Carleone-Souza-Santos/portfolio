@@ -10,7 +10,7 @@ import {
   ProjectName,
 } from './style/ModalStyle';
 
-const Modal = ({ show, close, project }) => {
+export const Modal = ({ show, close, project }) => {
   if (!show) {
     return null;
   }
@@ -43,5 +43,3 @@ const Modal = ({ show, close, project }) => {
     </Overlay>
   );
 };
-
-export default Modal;

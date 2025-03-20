@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Card } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
-import { StyledCard } from './style/CustomCardstyle';
+import { StyledCard } from './Style/CustomCardstyle';
 
 const { Meta } = Card;
 

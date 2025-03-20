@@ -7,17 +7,17 @@ import { Root } from './routes/Root';
 {
   /* whatssap */
 }
-import WhatsButton from './components/Whats/Whats';
+import { WhatsButton } from './components/Whats/Whats';
 {
   /* rodapé */
 }
-import Footer from './components/Footer/Footer';
+import { Footer } from './components/Footer/Footer';
 {
   /* Contador d acess */
 }
 import { VisitorCounter } from './components/VisitCount/Visitcount';
 
-function App() {
+export const App = () => {
   return (
     <>
       <Root />
@@ -26,5 +26,4 @@ function App() {
       <Footer />
     </>
   );
-}
-export default App;
+};

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import bgImage from '../assets/background.png';
+import bgImage from '../assets/background.jpg';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -14,8 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     overflow: hidden;
     font-family: 'Inter', sans-serif;
-    
-    color: ${({ theme, isDark }) => (isDark ? '#fff' : theme.colors.text)};
+    color: ${({ theme, $isDark }) => ($isDark ? '#fff' : theme.colors.text)};
     position: relative;
   }
 
@@ -34,8 +33,8 @@ export const GlobalStyles = createGlobalStyle`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ isDark }) =>
-      isDark ? 'rgba(0, 0, 0, 0.7)' : 'transparent'};
+    background: ${({ $isDark }) =>
+      $isDark ? 'rgba(0, 0, 0, 0.7)' : 'transparent'};
     z-index: -1;
   }
 

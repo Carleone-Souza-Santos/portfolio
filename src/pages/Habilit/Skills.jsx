@@ -1,11 +1,11 @@
 // src/components/Skills.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Row, Card } from './style/StyleHardSkil';
-import { hardSkills } from '../../service/ImgHardSkill/HardsSkill';
-import Modal from '../../components/Modal/Modal';
+import { Container, Row, Card } from './style/StyleSkil';
+import { mySkills } from '../../service/ImgHardSkill/HardsSkill';
+import { Modal } from '../../components/Modal/Modal';
 
-const hardsSkills = () => {
+export const Skills = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ const hardsSkills = () => {
   return (
     <Container>
       <Row>
-        {hardSkills.map((skill, index) => (
+        {mySkills.map((skill, index) => (
           <Card
             key={index}
             onClick={() => handleClick(skill.path)}
@@ -47,5 +47,3 @@ const hardsSkills = () => {
     </Container>
   );
 };
-
-export default hardsSkills;
