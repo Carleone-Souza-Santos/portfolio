@@ -9,8 +9,8 @@ const images = [
   './people/ana.jpg',
   './people/Anton.png',
   './people/Barb.png',
-  './assets/people/Igo.png',
-  './assets/people/Rit.png',
+  './people/Igo.png',
+  './people/Rit.png',
   './people/Sand.png',
   './people/Sab.png',
 ];
