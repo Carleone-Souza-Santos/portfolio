@@ -6,12 +6,12 @@ import {
 } from './Styles/CardServicstyles';
 
 const images = [
-  './people/ana.jpg',
-  './people/Anton.png',
-  './people/Barb.png',
-  './assets/people/Igo.png',
-  './assets/people/Rit.png',
-  './assets/people/Sand.png',
+  './src/people/ana.jpg',
+  './src/people/Anton.png',
+  './src/people/Barb.png',
+  './src/assets/people/Igo.png',
+  './src/assets/people/Rit.png',
+  './src/assets/people/Sand.png',
   './src/assets/people/Sab.png',
 ];
 
