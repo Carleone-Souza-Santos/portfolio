@@ -6,13 +6,13 @@ import {
 } from './Styles/CardServicstyles';
 
 const images = [
-  '../../src/assets/people/ana.jpg',
-  '../../src/assets/people/Anton.png',
-  '../../src/assets/people/Barb.png',
-  '../../src/assets/people/Igo.png',
-  '../../src/assets/people/Rit.png',
-  '../../src/assets/people/Sand.png',
-  '../../src/assets/people/Sab.png',
+  './people/ana.jpg',
+  './people/Anton.png',
+  './people/Barb.png',
+  './assets/people/Igo.png',
+  './assets/people/Rit.png',
+  './assets/people/Sand.png',
+  './src/assets/people/Sab.png',
 ];
 
 const welcome = [
